@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SmallCreditExchange</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/all.css"/>
+    <script type="text/javascript" src="/static/js/modernizr.js"></script>
+	<script type="text/javascript" src="/static/js/clear-form-fields.js"></script>
+	<script type="text/javascript" src="/static/js/form.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.touch.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.main.js"></script>
+	<script type="text/javascript" src="/static/js/input-type-file.js"></script>
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="js/pie.js"></script><![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+		<div class="header-holder">
+			<header id="header">
+				<h1 class="logo"><a href="#">SmallCreditExchange</a></h1>
+				<strong class="num">1.888.123.4567</strong>
+				<div class="welcom-block">
+					<a href="#" class="welcome">Hello, Lender!</a>
+					<div class="welcom-drop">
+						<ul>
+							<li><a href="#" class="item01">Logout</a></li>
+							<li><a href="#" class="item02">Account Settings</a></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="main-holder">
+			<nav class="nav-holder">
+				<div class="frame">
+					<ul class="menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#" class="active">Marketplace</a></li>
+						<li><a href="#">My Account</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div id="main">
+				<div class="table-content table-content-indent02">
+					<table class="table-description table-description-other">
+						<tbody>
+							<tr>
+								<td class="col01">Borrower:</td>
+								<td class="col02">Office cleaners & Co. </td>
+								<td class="col03">Risk:</td>
+								<td class="col04">A</td>
+								<td class="col05" rowspan="3">
+									<div class="link-holder link-holder-indent">
+                                        {% if not bidded %}
+                                        <a href="#" class="btn-status"><span>Bid</span></a>
+                                        <a href="bid.html?decline=true" class="btn-status decline"><span>Decline</span></a>
+										<div class="bid-drop">
+											<form action="bid.html" method="get">
+												<fieldset>
+													<div class="row">
+														<span class="input" style="width: 88px;"><input type="text" name="amount" value="10000" /></span>
+														<label>Amount, $</label>
+													</div>
+													<div class="row">
+														<span class="input" style="width: 88px;"><input type="text" name="discount" value="10" /></span>
+														<label>Discount, %</label>
+													</div>
+													<div class="row">
+														<span class="input" style="width: 88px;"><input type="text" name="repayment" value="10" /></span>
+														<label>Daily repayment, %</label>
+													</div>
+                                                    <div class="row">
+                                                        <input type="submit" value="submit">
+                                                    </div>
+												</fieldset>
+											</form>
+										</div>
+                                        {% else %}
+                                        <p><strong> Bid Successful!</strong></p>
+                                        {% endif %}
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="col01">Amount:</td>
+								<td class="col02">$20,000</td>
+								<td class="col03">Industry:</td>
+								<td class="col04">Business Svcs</td>
+							</tr>
+							<tr>
+								<td class="col01">Date:</td>
+								<td class="col02">1/12/2013</td>
+								<td class="col03">Location:</td>
+								<td class="col04">New York</td>
+							</tr>
+						</tbody>
+					</table>
+					<h2 class="title-table">Personal</h2>
+					<div class="table-info">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col01">Your name</td>
+									<td class="col02">John Johnson</td>
+								</tr>
+								<tr>
+									<td class="col01">Personal address</td>
+									<td class="col02">1 Hight Street, New York, NY, 10012</td>
+								</tr>
+								<tr>
+									<td class="col01">Personal phone</td>
+									<td class="col02">212 345 67 89</td>
+								</tr>
+								<tr>
+									<td class="col01">Email</td>
+									<td class="col02"><a href="mailto:john@mac.com" class="link-mail">john@mac.com</a></td>
+								</tr><tr>
+									<td class="col01">Social Security #</td>
+									<td class="col02">123 45 67 89</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2 class="title-table">Business</h2>
+					<div class="table-info">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col01">Business name</td>
+									<td class="col02">John & Associates LLC</td>
+								</tr>
+								<tr>
+									<td class="col01">Business address</td>
+									<td class="col02">1 Exchange Pl, New York, NY, 10032</td>
+								</tr>
+								<tr>
+									<td class="col01">Business phone</td>
+									<td class="col02">212 567 89 34</td>
+								</tr>
+								<tr>
+									<td class="col01">Industry</td>
+									<td class="col02">Legal</td>
+								</tr>
+								<tr>
+									<td class="col01">EIN</td>
+									<td class="col02">234567890</td>
+								</tr>
+								<tr>
+									<td class="col01">Monthly sales</td>
+									<td class="col02">$300,000</td>
+								</tr>
+								<tr>
+									<td class="col01">Revenue 2012</td>
+									<td class="col02">$5,000,000</td>
+								</tr>
+								<tr>
+									<td class="col01">Net profit 2012</td>
+									<td class="col02">$1,000,000</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2 class="title-table">Bank Account</h2>
+					<div class="statement-statistics">
+						<div class="visual">
+							<a href="#"><img src="/static/images/img03.jpg" alt="" width="526" height="316" /></a>
+						</div>
+						<div class="statistics-block">
+							<h3>Statement Statistics</h3>
+							<table>
+								<tbody>
+									<tr class="odd">
+										<td class="col01">Average monthly chatgebacks</td>
+										<td class="col02">$200</td>
+									</tr>
+									<tr>
+										<td class="col01">Average monthly sales</td>
+										<td class="col02">$100,000</td>
+									</tr>
+									<tr class="odd">
+										<td class="col01">Average monthly credit card sales</td>
+										<td class="col02">$50,000</td>
+									</tr>
+									<tr>
+										<td class="col01">Balance, 2/2/2013</td>
+										<td class="col02">$45,900</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer">
+		<div class="footer-holder">
+			<ul class="footer-nav">
+				<li><a href="#">Privacy & Security</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Rates & Fees</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</footer>
+</body> 
+</html>

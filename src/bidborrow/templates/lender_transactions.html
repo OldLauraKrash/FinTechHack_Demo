@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SmallCreditExchange</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/all.css" />
+	<script type="text/javascript" src="/static/js/modernizr.js"></script>
+	<script type="text/javascript" src="/static/js/clear-form-fields.js"></script>
+	<script type="text/javascript" src="/static/js/form.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.touch.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.main.js"></script>
+	<script type="text/javascript" src="/static/js/input-type-file.js"></script>
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="js/pie.js"></script><![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+		<div class="header-holder">
+			<header id="header">
+				<h1 class="logo"><a href="#">SmallCreditExchange</a></h1>
+				<strong class="num">1.888.123.4567</strong>
+				<div class="welcom-block">
+					<a href="#" class="welcome">Hello, Lender!</a>
+					<div class="welcom-drop">
+						<ul>
+							<li><a href="#" class="item01">Logout</a></li>
+							<li><a href="#" class="item02">Account Settings</a></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="main-holder">
+			<nav class="nav-holder">
+				<div class="frame">
+					<ul class="menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Marketplace</a></li>
+						<li><a href="#" class="active">My Account</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div id="main">
+				<ul class="main-list">
+					<li>
+						<div>
+							<a href="#" class="active">Portfolio</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#">Statements</a>
+						</div>
+					</li>
+					<li class="last-child">
+						<div>
+							<a href="#">Account</a>
+						</div>
+					</li>
+				</ul>
+				<div class="table-content">
+					<table class="table-description table-size-other">
+						<tbody>
+							<tr>
+								<td class="col01">Amount:</td>
+								<td class="col02">$20,000</td>
+								<td class="col03">To be repaid:</td>
+								<td class="col04">$25,000</td>
+								<td class="col05">Risk:</td>
+								<td class="col06">A</td>
+							</tr>
+							<tr>
+								<td class="col01">Date: </td>
+								<td class="col02">1/12/2013</td>
+								<td class="col03">APR*:</td>
+								<td class="col04">15%</td>
+								<td class="col05">Industry:</td>
+								<td class="col06">Business Svcs</td>
+							</tr>
+							<tr>
+								<td class="col01">Borrower:</td>
+								<td class="col02">Office Cleaners & Co.</td>
+								<td class="col03">Time to repay**:</td>
+								<td class="col04">9 months</td>
+								<td class="col05">Location:</td>
+								<td class="col06">New York</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table-general table-general-other">
+						<tbody>
+							<tr>
+								<th class="col01 align-left">Date</th>
+								<th class="col02">Provided</th>
+								<th class="col03">Paid</th>
+								<th class="col04">Balance</th>
+								<th class="col05">&nbsp;</th>
+							</tr> 
+                            {% with b=balance %}
+                            {% for t in transactions %}
+                            {% if 'Matt' in t.SourceName %}
+							<tr class="odd">
+                                <td class="col01 align-left">{{ t.Date }}</td>
+                                <td class="col02">${{t.Amount}}</td>
+                                <td class="col03">-</td>
+                                <td class="col04">${{t.Balance}}</td>
+								<td class="col05">&nbsp;</td>
+							</tr>
+                            {% else %}
+							<tr class="odd">
+                                <td class="col01 align-left">{{ t.Date }} </td>
+								<td class="col02">-</td>
+                                <td class="col03">${{t.Amount}}</td>
+                                <td class="col04">${{t.Balance}}</td>
+								<td class="col05">&nbsp;</td>
+							</tr>
+                            {% endif %}
+                            {% endfor %}
+                            {% endwith %}
+						</tbody>
+					</table>
+				</div>
+				<span class="table-text-info"> * Estimated APR based on current sales. <br />** Estimated time to repay based on current sales.</span>
+			</div>
+		</div>
+	</div>
+	<footer id="footer">
+		<div class="footer-holder">
+			<ul class="footer-nav">
+				<li><a href="#">Privacy & Security</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Rates & Fees</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</footer>
+</body> 
+</html>

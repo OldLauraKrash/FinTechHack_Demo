@@ -1,0 +1,7 @@
+Django==1.5.1
+MySQL-python
+South
+dwolla==1.4.8
+pymongo==2.5
+requests==1.2.0
+wsgiref==0.1.2
