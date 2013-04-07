@@ -41,7 +41,7 @@ def decision(request):
 def lender_transactions(request):
     template = loader.get_template('lender_transactions.html')
     t = debit.get_transactions(_keys.merchant_token)
-    balance = 4.89
+    balance = 4.93
     for trans in t:
         if 'Matt' in trans['SourceName']:
             balance -= trans['Amount']
