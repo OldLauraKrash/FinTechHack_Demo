@@ -1,1 +1,211 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>SmallCreditExchange</title>	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/all.css" />	<script type="text/javascript" src="{{STATIC_URL}}js/modernizr.js"></script>	<script type="text/javascript" src="{{STATIC_URL}}js/clear-form-fields.js"></script>	<script type="text/javascript" src="{{STATIC_URL}}js/form.js"></script>	<script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.9.1.min.js"></script>	<script type="text/javascript" src="{{STATIC_URL}}js/jquery-ui-1.9.2.custom.min.js"></script>	<script type="text/javascript" src="{{STATIC_URL}}js/jquery.touch.js"></script>	<script type="text/javascript" src="{{STATIC_URL}}js/jquery.main.js"></script>	<script type="text/javascript" src="{{STATIC_URL}}js/input-type-file.js"></script>	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->	<!--[if lt IE 9]><script type="text/javascript" src="{{STATIC_URL}}js/pie.js"></script><![endif]--></head><body>	<div id="wrapper">		<div class="header-holder">			<header id="header">				<span class="head-info">Lenders compete to provide financing to small businesses on best terms</span>				<strong class="logo"><a href="#">SmallCreditExchange</a></strong>				<strong class="num">1.888.123.4567</strong>				<form action="#" class="form-user" method="POST">					<fieldset>						<div class="holder">							<div class="input-holder" style="width: 121px;">								<span class="input"><input type="text" value="email" /></span>							</div>							<div class="input-holder" style="width: 121px;">								<span class="input"><input type="password" value="password" /></span>							</div>							<input type="button" class="btn-form" value="Sign in" />						</div>						<div class="row-link">							<span class="link-holder"><a href="#">Sign up for free</a></span>							<span class="link-holder"><a href="#">Forgot ID/Password</a></span>						</div>					</fieldset>				</form>			</header>		</div>		<div class="promo">			<div class="card">				<img src="{{STATIC_URL}}images/img-card.png" alt="" width="188" height="119" />			</div>			<img src="{{STATIC_URL}}images/img02.jpg" alt="" width="986" height="418" />			<h1>How much money does <br /><span>your busness need?</span></h1>			<form id="short_loan_form" class="form-content" action="{% url apply-loan %}" method="POST">{% csrf_token %}				<fieldset>					<div class="row">						<input type="submit" id="btn-popup1" class="btn-apply" value="Apply" />					</div>					<div class="row">						<input type="checkbox" class="checkbox" id="ch01" />						<label for="ch01">I agree to Privacy Policy and Terms of Use.</label>					</div>				</fieldset>				<input type="hidden" id='loan_amt' name="loan_amt" value=""/>			</form>			<div class="slide-holder">				<label>Amount</label>				<div class="slide">					<div class="slide-frame"></div>				</div>			</div>		</div>		<div class="main-holder">			<div id="main">				<ul class="main-menu">					<li class="item01">						<a href="#">							<span class="holder">								<span class="ico"><img src="{{STATIC_URL}}images/ico01.png" alt="" width="36" height="36" /></span>								<span class="text">Lenders compete to provide <br />their best offers to your business</span>							</span>						</a>					</li>					<li class="item02">						<a href="#">							<span class="holder">								<span class="ico"><img src="{{STATIC_URL}}images/ico02.png" alt="" width="43" height="44" /></span>								<span class="text">Free to use</span>							</span>						</a>					</li>					<li class="item03">						<a href="#">							<span class="holder">								<span class="ico"><img src="{{STATIC_URL}}images/ico03.png" alt="" width="50" height="51" /></span>								<span class="text">Decision in 30 minutes and <br />funding in 48 hours</span>							</span>						</a>					</li>				</ul>				<div class="container">					<div class="video">						<a href="#"><img src="{{STATIC_URL}}images/img01.jpg" alt="" width="466" height="333" /></a>					</div>					<div class="text">						<h2>Terms:</h2>						<ul class="list-terms">							<li><span class="green-text">Affordable</span> – APR of 15-25%</li>							<li><span class="green-text">Convenient</span> – automatic daily repayment</li>							<li><span class="green-text">Flexible</span> – repayment fully in line with your business perfomance</li>						</ul>						<form action="#" class="form-content" >							<fieldset>								<div class="row">									<input type="button" id="btn-popup2" class="btn-apply" value="Apply" />								</div>								<div class="row">									<input type="checkbox" class="checkbox" id="ch02" />									<label for="ch02">I agree to Privacy Policy and Terms of Use.</label>								</div>							</fieldset>													</form>					</div>				</div>			</div>		</div>	</div>	<footer id="footer">		<div class="footer-holder">			<ul class="footer-nav">				<li><a href="#">Privacy & Security</a></li>				<li><a href="#">Terms of Use</a></li>				<li><a href="#">Blog</a></li>				<li><a href="#">FAQ</a></li>				<li><a href="#">Rates & Fees</a></li>				<li><a href="#">Careers</a></li>				<li><a href="#">About</a></li>				<li><a href="#">Contact</a></li>			</ul>		</div>	</footer>	<div class="popup-holder" id="popup1" style="display:none;">		<div class="bg">&nbsp;</div>		<div class="popup">			<div class="content-popup">				<p>Sign up to Small Credit Exchange is by invitation only now.</p>				<form action="#" class="form-popup">					<fieldset>						<span class="info-form">Request invitation:</span>						<div class="row">							<label>Email:</label>							<span class="input"><input type="text" value="email" /></span>						</div>						<div class="row">							<label>&nbsp;</label>							<div class="btn-form" style="width: 137px;">								<span>									Go!									<input type="button" value="Go!" />								</span>							</div>						</div>					</fieldset>				</form>			</div>		</div>	</div>	<div class="popup-holder" id="popup2" style="display:none;">		<div class="bg">&nbsp;</div>		<div class="popup">			<span class="popup-info">Thank you! <br />We look forward to adding you aboard shortly.</span>		</div>	</div>	<div class="popup-holder" id="popup3" style="display:none;">		<div class="bg">&nbsp;</div>		<div class="popup">			<div class="content-popup">				<form action="#" class="form-popup form-popup-indent">					<fieldset>						<span class="info-form">Set up your account:</span>						<div class="row row-input">							<label>Email:</label>							<span class="input"><input type="text" value="email" /></span>						</div>						<div class="row">							<label>Password:</label>							<span class="input"><input type="password" value="password" /></span>						</div>						<div class="row">							<label>&nbsp;</label>							<div class="btn-form" style="width: 137px;">								<span>									Go!									<input type="button" value="Go!" />								</span>							</div>						</div>					</fieldset>				</form>			</div>		</div>	</div>	<script type="text/javascript">     $(document).ready(function() {    	     	   $('#short_loan_form').submit(function() {    	    	 $("#loan_amt").val($('a.ui-slider-handle.ui-state-default.ui-corner-all').text());    		  return true;    		});    });     </script></body> </html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SmallCreditExchange</title>
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/all.css" />
+	<script type="text/javascript" src="{{STATIC_URL}}js/modernizr.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/clear-form-fields.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/form.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery.touch.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery.main.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/input-type-file.js"></script>
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="{{STATIC_URL}}js/pie.js"></script><![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+		<div class="header-holder">
+			<header id="header">
+				<span class="head-info">Lenders compete to provide financing to small businesses on best terms</span>
+				<strong class="logo"><a href="#">SmallCreditExchange</a></strong>
+				<strong class="num">1.888.123.4567</strong>
+				<form action="#" class="form-user" method="POST">
+					<fieldset>
+						<div class="holder">
+							<div class="input-holder" style="width: 121px;">
+								<span class="input"><input type="text" value="email" /></span>
+							</div>
+							<div class="input-holder" style="width: 121px;">
+								<span class="input"><input type="password" value="password" /></span>
+							</div>
+							<input type="button" class="btn-form" value="Sign in" />
+						</div>
+						<div class="row-link">
+							<span class="link-holder"><a href="#">Sign up for free</a></span>
+							<span class="link-holder"><a href="#">Forgot ID/Password</a></span>
+						</div>
+					</fieldset>
+				</form>
+			</header>
+		</div>
+		<div class="promo">
+			<div class="card">
+				<img src="{{STATIC_URL}}images/img-card.png" alt="" width="188" height="119" />
+			</div>
+			<img src="{{STATIC_URL}}images/img02.jpg" alt="" width="986" height="418" />
+			<h1>How much money does <br /><span>your busness need?</span></h1>
+			<form id="short_loan_form" class="form-content" action="{% url 'apply-loan' %}" method="POST">{% csrf_token %}
+				<fieldset>
+					<div class="row">
+						<input type="submit" id="btn-popup1" class="btn-apply" value="Apply" />
+					</div>
+					<div class="row">
+						<input type="checkbox" class="checkbox" id="ch01" />
+						<label for="ch01">I agree to Privacy Policy and Terms of Use.</label>
+					</div>
+				</fieldset>
+				<input type="hidden" id='loan_amt' name="loan_amt" value=""/>
+			</form>
+			<div class="slide-holder">
+				<label>Amount</label>
+				<div class="slide">
+					<div class="slide-frame"></div>
+				</div>
+			</div>
+		</div>
+		<div class="main-holder">
+			<div id="main">
+				<ul class="main-menu">
+					<li class="item01">
+						<a href="#">
+							<span class="holder">
+								<span class="ico"><img src="{{STATIC_URL}}images/ico01.png" alt="" width="36" height="36" /></span>
+								<span class="text">Lenders compete to provide <br />their best offers to your business</span>
+							</span>
+						</a>
+					</li>
+					<li class="item02">
+						<a href="#">
+							<span class="holder">
+								<span class="ico"><img src="{{STATIC_URL}}images/ico02.png" alt="" width="43" height="44" /></span>
+								<span class="text">Free to use</span>
+							</span>
+						</a>
+					</li>
+					<li class="item03">
+						<a href="#">
+							<span class="holder">
+								<span class="ico"><img src="{{STATIC_URL}}images/ico03.png" alt="" width="50" height="51" /></span>
+								<span class="text">Decision in 30 minutes and <br />funding in 48 hours</span>
+							</span>
+						</a>
+					</li>
+				</ul>
+				<div class="container">
+					<div class="video">
+						<a href="#"><img src="{{STATIC_URL}}images/img01.jpg" alt="" width="466" height="333" /></a>
+					</div>
+					<div class="text">
+						<h2>Terms:</h2>
+						<ul class="list-terms">
+							<li><span class="green-text">Affordable</span> – APR of 15-25%</li>
+							<li><span class="green-text">Convenient</span> – automatic daily repayment</li>
+							<li><span class="green-text">Flexible</span> – repayment fully in line with your business perfomance</li>
+						</ul>
+						<form action="#" class="form-content" >
+							<fieldset>
+								<div class="row">
+									<input type="button" id="btn-popup2" class="btn-apply" value="Apply" />
+								</div>
+								<div class="row">
+									<input type="checkbox" class="checkbox" id="ch02" />
+									<label for="ch02">I agree to Privacy Policy and Terms of Use.</label>
+								</div>
+							</fieldset>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer">
+		<div class="footer-holder">
+			<ul class="footer-nav">
+				<li><a href="#">Privacy & Security</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Rates & Fees</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</footer>
+	<div class="popup-holder" id="popup1" style="display:none;">
+		<div class="bg">&nbsp;</div>
+		<div class="popup">
+			<div class="content-popup">
+				<p>Sign up to Small Credit Exchange is by invitation only now.</p>
+				<form action="#" class="form-popup">
+					<fieldset>
+						<span class="info-form">Request invitation:</span>
+						<div class="row">
+							<label>Email:</label>
+							<span class="input"><input type="text" value="email" /></span>
+						</div>
+						<div class="row">
+							<label>&nbsp;</label>
+							<div class="btn-form" style="width: 137px;">
+								<span>
+									Go!
+									<input type="button" value="Go!" />
+								</span>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup-holder" id="popup2" style="display:none;">
+		<div class="bg">&nbsp;</div>
+		<div class="popup">
+			<span class="popup-info">Thank you! <br />We look forward to adding you aboard shortly.</span>
+		</div>
+	</div>
+	<div class="popup-holder" id="popup3" style="display:none;">
+		<div class="bg">&nbsp;</div>
+		<div class="popup">
+			<div class="content-popup">
+				<form action="#" class="form-popup form-popup-indent">
+					<fieldset>
+						<span class="info-form">Set up your account:</span>
+						<div class="row row-input">
+							<label>Email:</label>
+							<span class="input"><input type="text" value="email" /></span>
+						</div>
+						<div class="row">
+							<label>Password:</label>
+							<span class="input"><input type="password" value="password" /></span>
+						</div>
+						<div class="row">
+							<label>&nbsp;</label>
+							<div class="btn-form" style="width: 137px;">
+								<span>
+									Go!
+									<input type="button" value="Go!" />
+								</span>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+     $(document).ready(function() {
+    	 
+    	   $('#short_loan_form').submit(function() {
+    	    	 $("#loan_amt").val($('a.ui-slider-handle.ui-state-default.ui-corner-all').text());
+    		  return true;
+    		});
+
+    });
+     </script>
+</body> 
+</html>
