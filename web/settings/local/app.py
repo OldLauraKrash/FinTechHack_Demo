@@ -28,7 +28,6 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'accounts',
     'bidborrow',
-    'south'
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'

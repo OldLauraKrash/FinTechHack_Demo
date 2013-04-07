@@ -55,7 +55,7 @@ LOGIN_URL = '/accounts/login/'
 MIME_TYPE_ZIP = 'application/zip'
 MIME_TYPE_CSV = 'text/csv'
 
-
+"""
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -121,3 +121,4 @@ LOGGING = {
         },
     },
 }
+"""
