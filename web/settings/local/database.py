@@ -5,7 +5,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'manav_demo',
         'USER': 'root',
-        'PASSWORD': 'astManav6s',
+        'PASSWORD': 'dummy',
         'HOST': 'localhost',
         'PORT': '3306',
         'TEST_CHARSET': 'UTF8',

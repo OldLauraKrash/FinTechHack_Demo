@@ -14,10 +14,10 @@ urlpatterns = patterns('',
     # The static serve should go away for production
     #(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_DOC_ROOT}),
 
-   (r'^bid/','bidborrow.views.bid'),
-   (r'^borrow/','bidborrow.views.borrow'),
-   (r'^decision/','bidborrow.views.decision'),
-   (r'^lender_transaction/','bidborrow.views.lender_transactions'),
+   #(r'^bid/','bidborrow.views.bid'),
+   #(r'^borrow/','bidborrow.views.borrow'),
+   #(r'^decision/','bidborrow.views.decision'),
+   #(r'^lender_transaction/','bidborrow.views.lender_transactions'),
 
 )
 

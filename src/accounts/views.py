@@ -18,8 +18,19 @@ from django.template.context import RequestContext
 
 
 def apply_loan(request):
-    if request.method == 'POST':
-        print  'manav'
-        pass
-    return render_to_response('accounts/2-list.html', {'test': 'test'},context_instance=RequestContext(request))
+    #if request.method == 'POST':
+    #    pass
+    return render_to_response('accounts/2-list.html',context_instance=RequestContext(request))
+
+def apply_loan_mock_2(request):
+    #if request.method == 'POST':
+    #    print  'manav'
+    #    pass
+    return render_to_response('accounts/4-list.html',context_instance=RequestContext(request))
+
+def apply_loan_mock_3(request):
+    #if request.method == 'POST':
+    #    print  'manav'
+    #    pass
+    return render_to_response('accounts/5-list.html', context_instance=RequestContext(request))
 
